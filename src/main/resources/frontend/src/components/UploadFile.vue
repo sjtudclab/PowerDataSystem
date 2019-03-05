@@ -7,7 +7,7 @@
     	<el-upload
     	  class="upload-demo"
     	  ref="upload"
-    	  action="http://localhost:8080/uploadFile/"
+    	  action="http://localhost:8080/api/uploadFile/"
     	  :on-preview="handlePreview"
     	  :on-remove="handleRemove"
     	  :on-error="errorUpload"

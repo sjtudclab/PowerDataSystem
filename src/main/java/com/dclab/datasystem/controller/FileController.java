@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @CrossOrigin
 @RestController
+@RequestMapping(value="/api")
 public class FileController {
     @Autowired
     private FileService fileService;
