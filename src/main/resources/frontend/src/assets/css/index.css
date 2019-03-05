@@ -1,0 +1,15 @@
+.lessmargin{
+	margin-bottom: 3px; 
+}
+.link{
+	color: white;
+	text-decoration-line: none;
+}
+
+.link:hover {
+	text-decoration-line: none;
+	color: white;
+}
+html,body{
+	margin: 0px 0px 0px 0px;
+}
