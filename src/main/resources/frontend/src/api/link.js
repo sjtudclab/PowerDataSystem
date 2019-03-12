@@ -23,6 +23,13 @@ const getFileList = {
     return instance.post(`${preUrlPath}/getFileList/`, params)
   }
 }
+const getBookTitle = {
+  p: ['get,/getBookTitle'],
+  r: params => {
+    return instance.get(`${preUrlPath}/getBookTitle/`, params)
+  }
+}
+
 
 
 
@@ -31,4 +38,5 @@ export {
 	userLogin,
 	downloadFile,
   getFileList,
+  getBookTitle
 }

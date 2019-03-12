@@ -2,11 +2,13 @@ package com.dclab.datasystem.controller;
 
 import com.dclab.datasystem.domain.FileInfo;
 import com.dclab.datasystem.service.FileService;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 @CrossOrigin
 @RestController
@@ -32,6 +34,9 @@ public class FileController {
     public Object getFileList() throws Exception{
         return fileService.getFileList();
     }
-
-
+    @RequestMapping(value = "/getBookTitle",method = RequestMethod.GET)
+    public Object getBookTitle(String fileID) throws IOException, InvalidFormatException {
+        int fileIDInt = Integer.parseInt(fileID);
+        return fileService.getBookTitle(fileIDInt);
+    }
 }
