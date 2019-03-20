@@ -6,7 +6,9 @@ import Index from '@/views/index'
 import UploadFile from '@/views/UploadFile'
 import Inquire from '@/views/Inquire'
 import RemoteDownload from '@/views/RemoteDownload'
-
+import FileSearch from "@/views/FileSearch"
+import Handle from '@/views/Handle'
+import MetaData from '@/views/MetaData'
 Vue.use(Router)
 
 export default new Router({
@@ -36,6 +38,21 @@ export default new Router({
     	path: '/remotedownload',
     	name: 'remotedownload',
     	component: RemoteDownload
+    },
+    {
+      path:'/filesearch',
+      name:'filesearch',
+      component:FileSearch
+    },
+    {
+      path:'/handledata',
+      name:'handle',
+      component:Handle
+    },
+    {
+      path:'/metadata',
+      name:'metadata',
+      component:MetaData
     }
   ]
 })

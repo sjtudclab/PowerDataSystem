@@ -14,7 +14,7 @@
 					</el-input>
 				  </el-col>
 				  <el-col :span="5">
-					<el-button>下载</el-button>	
+					<el-button>开始传输</el-button>
 				  </el-col>
 			
 				  

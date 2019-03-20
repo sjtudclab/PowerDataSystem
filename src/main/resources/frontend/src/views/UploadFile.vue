@@ -1,20 +1,21 @@
 
 <template>
-  <el-container>
-    <el-header> 
+<el-container>
+    <el-header>
       <NavMenu></NavMenu>
     </el-header>
+    <div>
+
     <el-container>
       <el-aside width='300px'>
           <Sidebar></Sidebar>
       </el-aside>
-      <el-container class="container">
         <el-main class="main">
-          <UploadFile></UploadFile>
+          <MiniUpload></MiniUpload>
         </el-main>
-      </el-container>
-        
+
     </el-container>
+    </div>
   </el-container>
 </template>
 <script type="text/javascript">
@@ -22,9 +23,10 @@
   import UploadFile from '@/components/UploadFile'
   import Sidebar from '@/components/Sidebar'
   import {getCookie} from '@/api/util'
+  import MiniUpload from "../components/MiniUpload";
   export default {
     name: 'manage',
-    components: {NavMenu,UploadFile,Sidebar},
+    components: {MiniUpload, NavMenu,UploadFile,Sidebar},
     created(){
       if(getCookie('username') == ""){
         this.$router.push({path:"/login"})
@@ -41,5 +43,5 @@
     padding: 0px;
     padding-left: 10px;
   }
-  
+
 </style>
